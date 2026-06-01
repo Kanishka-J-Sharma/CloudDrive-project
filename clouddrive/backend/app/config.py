@@ -66,8 +66,8 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     # ── JWT ────────────────────────────────────────────────────────────────────
-    # Secrets Manager value takes precedence; env var is the fallback.
-    JWT_SECRET_KEY = _sm.get("JWT_SECRET_KEY") or os.environ.get("JWT_SECRET_KEY", "jwt-dev-secret")
+    # For HW9 Simulation: Disabled Secrets Manager override so the local .env rotation works.
+    JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY", "jwt-dev-secret")
     JWT_EXPIRY     = timedelta(hours=int(os.environ.get("JWT_EXPIRY_HOURS", 24)))
 
     # ── AWS / S3 ───────────────────────────────────────────────────────────────
