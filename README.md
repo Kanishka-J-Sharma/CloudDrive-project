@@ -57,9 +57,3 @@ layers: application, container infrastructure, and cloud configuration.
 ### Services
 - Main app: http://localhost
 - Grafana dashboard: http://localhost:3000 (admin/admin default)
-
-## Security documents
-
-- [Threat Model](docs/threat-model.md)
-- [Security Testing](docs/security-testing.md)
-- [Gaps Analysis](docs/gaps-analysis.md)
